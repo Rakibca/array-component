@@ -13,7 +13,19 @@ function App() {
 
   function removeSpecificLetter(letter) {
     setArray((currentArray) => {
-      return currentArray.filter(element => element !== letter);
+      return currentArray.filter((element) => element !== letter);
+    });
+  }
+
+  function addLetterToStart(letter) {
+    setArray((currentArray) => {
+      return [letter, ...currentArray];
+    });
+  }
+
+  function addLetterToEnd(letter) {
+    setArray((currentArray) => {
+      return [...currentArray, letter];
     });
   }
 
@@ -23,6 +35,12 @@ function App() {
       <br />
       <br />
       <button onClick={() => removeSpecificLetter("B")}>Remove All B's</button>
+      <br />
+      <br />
+      <button onClick={() => addLetterToStart("M")}>Add To Start</button>
+      <br />
+      <br />
+      <button onClick={() => addLetterToEnd("Z")}>Add To End</button>
       <br />
       <br />
       <div>{array.join(",")}</div>
