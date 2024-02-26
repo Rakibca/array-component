@@ -37,6 +37,15 @@ function App() {
     setArray(INITIAL_VALUE);
   }
 
+  function updateAToH() {
+    setArray((currentArray) => {
+      return currentArray.map((element) => {
+        if (element === "A") return "H";
+        return element;
+      });
+    });
+  }
+
   return (
     <div>
       <button onClick={removeFirstElement}>Remove First Element</button>
@@ -55,6 +64,9 @@ function App() {
       <br />
       <br />
       <button onClick={reset}>Reset</button>
+      <br />
+      <br />
+      <button onClick={updateAToH}>Update A To H</button>
       <br />
       <br />
       <div>{array.join(",")}</div>
