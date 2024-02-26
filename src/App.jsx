@@ -29,6 +29,14 @@ function App() {
     });
   }
 
+  function clear() {
+    setArray([]);
+  }
+
+  function reset() {
+    setArray(INITIAL_VALUE);
+  }
+
   return (
     <div>
       <button onClick={removeFirstElement}>Remove First Element</button>
@@ -41,6 +49,12 @@ function App() {
       <br />
       <br />
       <button onClick={() => addLetterToEnd("Z")}>Add To End</button>
+      <br />
+      <br />
+      <button onClick={clear}>Clear</button>
+      <br />
+      <br />
+      <button onClick={reset}>Reset</button>
       <br />
       <br />
       <div>{array.join(",")}</div>
