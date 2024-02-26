@@ -47,6 +47,16 @@ function App() {
     });
   }
 
+  function addLetterAtIndex(letter, index) {
+    setArray((currentArray) => {
+      return [
+        ...currentArray.slice(0, index),
+        letter,
+        ...currentArray.slice(index),
+      ];
+    });
+  }
+
   return (
     <div>
       <button onClick={removeFirstElement}>Remove First Element</button>
@@ -75,6 +85,11 @@ function App() {
       <br />
       <button onClick={() => addLetterToStart(value)}>
         Add Value To Array
+      </button>
+      <br />
+      <br />
+      <button onClick={() => addLetterAtIndex("Q", 3)}>
+        Add Letter Q at Index 3
       </button>
       <br />
       <br />
