@@ -59,6 +59,9 @@ function App() {
 
   return (
     <div>
+      <div>{array.join(",")} </div>
+      <br />
+      <br />
       <button onClick={removeFirstElement}>Remove First Element</button>
       <br />
       <br />
@@ -91,9 +94,6 @@ function App() {
       <button onClick={() => addLetterAtIndex("Q", 3)}>
         Add Letter Q at Index 3
       </button>
-      <br />
-      <br />
-      <div>{array.join(",")}</div>
     </div>
   );
 }
